@@ -7,13 +7,47 @@
   --color-ts-darkred: #7A0005;
   --color-ts-white: #FFFFFF;
   --color-ts-gray: #D6D6D6;
+
+  /* Premium animations */
+  --animate-fade-in: fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(229, 9, 20, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(229, 9, 20, 0.6);
+    }
+  }
 }
 
 @layer base {
   body {
-    @apply bg-ts-bg text-ts-white antialiased;
+    @apply bg-ts-bg text-ts-white antialiased selection:bg-ts-red selection:text-ts-white;
     /* Subtile texture pour le fond premium */
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23151515' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
   }
 }
 
@@ -24,5 +58,25 @@
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  
+  /* Neons & Glow Effects */
+  .shadow-neon {
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.25);
+  }
+  .shadow-neon-strong {
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.5);
+  }
+  .shadow-neon-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .shadow-neon-hover:hover {
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.45);
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+  }
+  .text-glow-strong {
+    text-shadow: 0 0 15px rgba(229, 9, 20, 0.8), 0 0 5px rgba(255, 255, 255, 0.5);
   }
 }

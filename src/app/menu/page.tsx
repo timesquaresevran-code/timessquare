@@ -14,23 +14,26 @@ export default function MenuPage() {
   return (
     <div className="min-h-screen bg-ts-bg">
       {/* Header Section */}
-      <div className="bg-ts-card border-b border-ts-red/20 pt-12 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-ts-bg opacity-50 pointer-events-none"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="bg-ts-card/25 border-b border-white/5 pt-32 pb-20 relative overflow-hidden">
+        {/* Subtle grid background */}
+        <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-ts-red/5 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-black text-ts-white mb-6 uppercase tracking-tighter">
-            NOTRE <span className="text-ts-red drop-shadow-[0_0_10px_rgba(229,9,20,0.5)]">MENU</span>
+            NOTRE <span className="bg-gradient-to-r from-ts-red to-[#ff4754] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(229,9,20,0.5)]">CARTE</span>
           </h1>
-          <p className="text-xl text-ts-gray max-w-2xl mx-auto font-medium mb-10">
+          <p className="text-lg text-ts-gray/80 max-w-2xl mx-auto font-medium mb-10 leading-relaxed">
             Découvrez nos créations exclusives préparées à la commande avec des ingrédients premium.
           </p>
 
           {/* Call to action buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-lg mx-auto">
-            <a href="tel:0186047946" className="flex-1 px-6 py-4 text-sm font-bold rounded-full text-ts-white border-2 border-ts-red hover:bg-ts-red transition-all uppercase tracking-widest flex items-center justify-center gap-2 group">
-              <span className="text-xl group-hover:scale-110 transition-transform">📞</span> Appeler
+          <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+            <a href="tel:0186047946" className="flex-1 px-6 py-3.5 text-xs font-black rounded-full text-ts-white border border-white/10 hover:border-ts-red/50 hover:bg-ts-red/10 transition-all uppercase tracking-widest flex items-center justify-center gap-2">
+              📞 Appeler
             </a>
-            <a href="https://www.google.com/maps/dir/?api=1&destination=2e+Bd+Westinghouse,+93270+Sevran" target="_blank" rel="noopener noreferrer" className="flex-1 px-6 py-4 text-sm font-bold rounded-full text-ts-white bg-ts-red hover:bg-ts-darkred shadow-[0_0_15px_rgba(229,9,20,0.4)] hover:shadow-[0_0_25px_rgba(229,9,20,0.7)] transition-all uppercase tracking-widest flex items-center justify-center gap-2">
-              <span className="text-xl">📍</span> Itinéraire
+            <a href="https://www.google.com/maps/dir/?api=1&destination=2e+Bd+Westinghouse,+93270+Sevran" target="_blank" rel="noopener noreferrer" className="flex-1 px-6 py-3.5 text-xs font-black rounded-full text-ts-white bg-ts-red hover:bg-ts-darkred shadow-[0_0_15px_rgba(229,9,20,0.3)] hover:shadow-[0_0_25px_rgba(229,9,20,0.6)] transition-all uppercase tracking-widest flex items-center justify-center gap-2">
+              📍 Itinéraire
             </a>
           </div>
         </div>
@@ -38,11 +41,11 @@ export default function MenuPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Filtres / Ancres */}
-        <div className="sticky top-24 z-40 bg-ts-bg/95 backdrop-blur-md py-4 mb-16 border-b border-ts-red/10 -mx-4 px-4 sm:mx-0 sm:px-0">
-          <div className="flex overflow-x-auto gap-3 pb-4 scrollbar-hide items-center">
+        <div className="sticky top-20 z-40 bg-ts-bg/75 backdrop-blur-lg py-5 mb-16 border-b border-white/5 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="flex overflow-x-auto gap-3 pb-3 scrollbar-hide items-center">
             <button 
               onClick={() => setActiveFilter("all")}
-              className={`whitespace-nowrap px-6 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all border-2 ${activeFilter === "all" ? "bg-ts-red border-ts-red text-ts-white shadow-[0_0_15px_rgba(229,9,20,0.4)]" : "bg-ts-card border-ts-red/20 text-ts-gray hover:border-ts-red"}`}
+              className={`whitespace-nowrap px-6 py-3 rounded-full font-black uppercase tracking-wider text-xs transition-all border ${activeFilter === "all" ? "bg-ts-red border-ts-red text-ts-white shadow-[0_0_15px_rgba(229,9,20,0.4)]" : "bg-ts-card border-white/5 text-ts-gray hover:border-ts-red/50"}`}
             >
               Tous
             </button>
@@ -56,7 +59,7 @@ export default function MenuPage() {
                     document.getElementById(cat.id)?.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className={`whitespace-nowrap px-6 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all border-2 ${activeFilter === cat.id ? "bg-ts-red border-ts-red text-ts-white shadow-[0_0_15px_rgba(229,9,20,0.4)]" : "bg-ts-card border-ts-red/20 text-ts-gray hover:border-ts-red"}`}
+                className={`whitespace-nowrap px-6 py-3 rounded-full font-black uppercase tracking-wider text-xs transition-all border ${activeFilter === cat.id ? "bg-ts-red border-ts-red text-ts-white shadow-[0_0_15px_rgba(229,9,20,0.4)]" : "bg-ts-card border-white/5 text-ts-gray hover:border-ts-red/50"}`}
               >
                 {cat.title}
               </button>
@@ -65,7 +68,7 @@ export default function MenuPage() {
         </div>
 
         {/* Sections du Menu */}
-        <div className="space-y-24">
+        <div className="space-y-28">
           {displayedCategories.map((category) => (
             <MenuSection key={category.id} category={category} />
           ))}

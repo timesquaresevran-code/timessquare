@@ -20,42 +20,80 @@ export default function Home() {
     getProductById("nd-super-trio")    // Super Trio (Naandwichs)
   ].filter((item): item is NonNullable<typeof item> => item !== null);
 
+  const categoryImages: Record<string, string> = {
+    "naan-burgers": "/images/big_square.webp",
+    "naandwichs": "/images/super_trio.webp",
+    "burgers": "/images/double_cheese.webp",
+    "smash-burgers": "/images/times_square.webp",
+    "tinger": "/images/tinger.webp"
+  };
+
   return (
     <>
       <Hero />
       
       {/* Nos Incontournables */}
-      <div className="bg-ts-bg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-ts-red to-transparent"></div>
-        <div className="text-center mb-16 pt-8">
-          <h2 className="text-sm font-bold text-ts-red tracking-[0.3em] uppercase mb-4">L'excellence</h2>
-          <p className="text-4xl md:text-5xl font-black text-ts-white tracking-tight uppercase drop-shadow-md">Nos incontournables</p>
+      <div className="bg-ts-bg max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-20 bg-gradient-to-b from-ts-red to-transparent"></div>
+        <div className="absolute top-28 left-1/2 -translate-x-1/2 w-72 h-72 bg-ts-red/5 rounded-full blur-[80px] pointer-events-none" />
+        
+        <div className="text-center mb-20 pt-8 relative z-10">
+          <h2 className="text-xs font-black text-ts-red tracking-[0.4em] uppercase mb-4">L'excellence</h2>
+          <p className="text-4xl md:text-5xl font-black text-ts-white tracking-tight uppercase">
+            Nos <span className="bg-gradient-to-r from-ts-red to-[#ff4754] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(229,9,20,0.3)]">incontournables</span>
+          </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
           {incontournables.map((item) => (
             item && <MenuCard key={item.id} product={item} />
           ))}
         </div>
         
-        <div className="text-center mt-16">
-          <Link href="/menu" className="inline-flex items-center justify-center px-10 py-5 border-2 border-ts-red text-lg font-bold rounded-full text-ts-red hover:bg-ts-red hover:text-ts-white transition-all hover:shadow-[0_0_20px_rgba(229,9,20,0.5)] uppercase tracking-widest group">
+        <div className="text-center mt-20 relative z-10">
+          <Link href="/menu" className="inline-flex items-center justify-center px-10 py-5 border-2 border-ts-red text-sm font-black rounded-full text-ts-red hover:bg-ts-red hover:text-ts-white transition-all hover:shadow-[0_0_25px_rgba(229,9,20,0.6)] uppercase tracking-widest group">
             Découvrir tout le menu
-            <span className="ml-3 group-hover:translate-x-2 transition-transform">→</span>
+            <span className="ml-3 group-hover:translate-x-2 transition-transform duration-300 font-bold">→</span>
           </Link>
         </div>
       </div>
 
-      {/* Catégories du Menu */}
-      <div className="bg-ts-card border-y border-ts-red/20 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-sm font-bold text-ts-red tracking-[0.3em] uppercase mb-4">La Carte</h2>
-          <p className="text-4xl md:text-5xl font-black text-ts-white tracking-tight uppercase mb-16 drop-shadow-md">Que voulez-vous déguster ?</p>
+      {/* Catégories du Menu (La Carte) */}
+      <div className="bg-ts-card/40 border-y border-white/5 py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#808080_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-xs font-black text-ts-red tracking-[0.4em] uppercase mb-4">La Carte</h2>
+          <p className="text-4xl md:text-5xl font-black text-ts-white tracking-tight uppercase mb-20">Que voulez-vous déguster ?</p>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {menuData.map((cat) => (
-              <Link key={cat.id} href={`/menu#${cat.id}`} className="block bg-ts-bg border border-ts-red/10 rounded-2xl p-6 hover:border-ts-red hover:shadow-[0_10px_30px_rgba(229,9,20,0.15)] transition-all hover:-translate-y-2 group">
-                <h3 className="text-lg md:text-xl font-black text-ts-white uppercase tracking-wider group-hover:text-ts-red transition-colors">{cat.title}</h3>
+              <Link 
+                key={cat.id} 
+                href={`/menu#${cat.id}`} 
+                className="relative h-72 rounded-3xl overflow-hidden border border-white/5 shadow-2xl hover:border-ts-red/40 hover:shadow-[0_15px_35px_rgba(229,9,20,0.25)] transition-all duration-500 hover:-translate-y-2 group"
+              >
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                  <img 
+                    src={categoryImages[cat.id] || "/images/big_square.webp"} 
+                    alt={cat.title} 
+                    className="w-full h-full object-cover opacity-35 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ts-bg via-ts-bg/85 to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="absolute inset-0 p-6 flex flex-col justify-end items-start z-10 text-left">
+                  <span className="text-[10px] font-black text-ts-red uppercase tracking-widest bg-ts-red/15 border border-ts-red/20 px-2.5 py-1 rounded-full mb-3">
+                    {cat.items.length} Produits
+                  </span>
+                  <h3 className="text-lg md:text-xl font-black text-ts-white uppercase tracking-tight leading-tight group-hover:text-ts-red transition-colors duration-300">
+                    {cat.title}
+                  </h3>
+                  <span className="text-[10px] text-ts-gray/50 font-bold uppercase tracking-widest mt-2 flex items-center gap-1 group-hover:text-ts-white transition-colors duration-300">
+                    Découvrir <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
@@ -63,50 +101,51 @@ export default function Home() {
       </div>
 
       {/* Ouverture & Accès */}
-      <div className="bg-ts-bg py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="bg-ts-bg py-32 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-ts-red/5 rounded-full blur-[120px] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             
             {/* Section Ouverture */}
-            <div className="bg-ts-card p-10 rounded-3xl border border-ts-red/20 shadow-2xl relative group hover:border-ts-red/50 transition-colors">
+            <div className="bg-ts-card/60 backdrop-blur-md p-10 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative group hover:border-ts-red/20 transition-all duration-500">
               <div className="absolute top-0 right-0 w-32 h-32 bg-ts-red/5 rounded-bl-full -z-0"></div>
-              <h2 className="text-3xl font-black text-ts-white uppercase tracking-tight mb-8 relative z-10 flex items-center">
-                <span className="text-ts-red mr-4 text-4xl">⏱</span> Nos Horaires
+              <h2 className="text-2xl font-black text-ts-white uppercase tracking-tight mb-10 relative z-10 flex items-center gap-4">
+                <span className="text-ts-red text-3xl">⏱</span> Nos Horaires
               </h2>
-              <ul className="space-y-4 text-lg font-medium text-ts-gray relative z-10">
-                <li className="flex justify-between border-b border-ts-bg pb-3">
-                  <span>Lundi - Jeudi</span> <span className="text-ts-white font-bold">11h30-14h30 • 18h30-23h00</span>
+              <ul className="space-y-5 text-base font-semibold text-ts-gray relative z-10">
+                <li className="flex justify-between border-b border-white/5 pb-4">
+                  <span>Lundi - Jeudi</span> <span className="text-ts-white font-black bg-white/5 px-3 py-1 rounded">11h30 - 14h30 • 18h30 - 23h00</span>
                 </li>
-                <li className="flex justify-between border-b border-ts-bg pb-3">
-                  <span>Vendredi</span> <span className="text-ts-white font-bold">18h30-00h00</span>
+                <li className="flex justify-between border-b border-white/5 pb-4">
+                  <span>Vendredi</span> <span className="text-ts-white font-black bg-white/5 px-3 py-1 rounded">18h30 - 00h00</span>
                 </li>
-                <li className="flex justify-between border-b border-ts-bg pb-3">
-                  <span>Samedi</span> <span className="text-ts-white font-bold">11h30-15h00 • 18h30-00h00</span>
+                <li className="flex justify-between border-b border-white/5 pb-4">
+                  <span>Samedi</span> <span className="text-ts-white font-black bg-white/5 px-3 py-1 rounded">11h30 - 15h00 • 18h30 - 00h00</span>
                 </li>
-                <li className="flex justify-between">
-                  <span>Dimanche</span> <span className="text-ts-white font-bold">18h30-23h00</span>
+                <li className="flex justify-between pb-2">
+                  <span>Dimanche</span> <span className="text-ts-white font-black bg-white/5 px-3 py-1 rounded">18h30 - 23h00</span>
                 </li>
               </ul>
             </div>
 
             {/* Section Adresse */}
-            <div className="bg-ts-card p-10 rounded-3xl border border-ts-red/20 shadow-2xl relative group hover:border-ts-red/50 transition-colors">
+            <div className="bg-ts-card/60 backdrop-blur-md p-10 md:p-12 rounded-3xl border border-white/5 shadow-2xl relative group hover:border-ts-red/20 transition-all duration-500">
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-ts-red/5 rounded-tl-full -z-0"></div>
-              <h2 className="text-3xl font-black text-ts-white uppercase tracking-tight mb-8 relative z-10 flex items-center">
-                <span className="text-ts-red mr-4 text-4xl">📍</span> Accès
+              <h2 className="text-2xl font-black text-ts-white uppercase tracking-tight mb-10 relative z-10 flex items-center gap-4">
+                <span className="text-ts-red text-3xl">📍</span> Accès & Contact
               </h2>
-              <div className="space-y-6 relative z-10">
+              <div className="space-y-8 relative z-10">
                 <div>
-                  <p className="text-ts-gray uppercase tracking-widest text-sm font-bold mb-2">Adresse</p>
-                  <p className="text-2xl font-bold text-ts-white">2e Bd Westinghouse</p>
-                  <p className="text-xl text-ts-white">93270 Sevran</p>
+                  <p className="text-ts-red uppercase tracking-widest text-xs font-black mb-3">Adresse</p>
+                  <p className="text-2xl font-black text-ts-white leading-tight">2e Bd Westinghouse</p>
+                  <p className="text-lg text-ts-gray font-medium">93270 Sevran</p>
                 </div>
                 <div>
-                  <p className="text-ts-gray uppercase tracking-widest text-sm font-bold mb-2">Contact</p>
-                  <p className="text-2xl font-bold text-ts-red">01 86 04 79 46</p>
+                  <p className="text-ts-red uppercase tracking-widest text-xs font-black mb-3">Contact</p>
+                  <p className="text-3xl font-black text-ts-white">01 86 04 79 46</p>
                 </div>
                 <div className="pt-4">
-                  <a href="https://www.google.com/maps/dir/?api=1&destination=2e+Bd+Westinghouse,+93270+Sevran" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 border border-ts-red text-base font-bold rounded-full text-ts-white hover:bg-ts-red transition-all uppercase tracking-widest w-full">
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=2e+Bd+Westinghouse,+93270+Sevran" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-white/5 border border-white/10 text-sm font-black rounded-full text-ts-white hover:bg-ts-red hover:border-ts-red hover:shadow-[0_0_20px_rgba(229,9,20,0.4)] transition-all uppercase tracking-widest w-full">
                     Lancer l'itinéraire
                   </a>
                 </div>
