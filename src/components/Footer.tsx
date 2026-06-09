@@ -49,14 +49,17 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-ts-bg text-center text-xs text-ts-gray font-medium flex flex-col justify-center items-center gap-2">
+        <div className="mt-12 pt-8 border-t border-white/5 text-center text-xs text-ts-gray font-medium flex flex-col justify-center items-center gap-2">
           <p className="font-bold text-ts-white">Times Square Sevran</p>
           <p>2e Bd Westinghouse, 93270 Sevran</p>
           <p>01 86 04 79 46</p>
-          <div className="mt-4 flex flex-col md:flex-row justify-between items-center gap-4 w-full">
-            <span>&copy; {new Date().getFullYear()} Times Square Sevran. Tous droits réservés.</span>
-            <span className="text-ts-bg/50 text-[10px]">Made with passion</span>
-          </div>
+          
+          {/* Petit soulignement discret */}
+          <div className="w-16 h-[1px] bg-white/10 mt-6 mb-4"></div>
+          
+          <p className="text-ts-gray/50">
+            &copy; {new Date().getFullYear()} Times Square Sevran. Tous droits réservés.
+          </p>
         </div>
       </div>
     </footer>
