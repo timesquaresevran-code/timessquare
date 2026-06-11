@@ -75,7 +75,7 @@ export default function MenuPage() {
                   setActiveTab(tab.id);
                   // Optionnel : remet le hash à vide si on change d'onglet
                   if (typeof window !== "undefined") {
-                    window.history.pushState("", document.title, window.location.pathname);
+                    window.history.pushState({}, "", window.location.pathname);
                   }
                 }}
                 className={`whitespace-nowrap px-6 py-3 rounded-full font-black uppercase tracking-wider text-xs transition-all border ${activeTab === tab.id ? "bg-ts-red border-ts-red text-ts-white shadow-[0_0_15px_rgba(229,9,20,0.4)]" : "bg-ts-card border-white/5 text-ts-gray hover:border-ts-red/50"}`}
