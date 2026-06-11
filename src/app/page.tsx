@@ -20,13 +20,51 @@ export default function Home() {
     getProductById("nd-super-trio")    // Super Trio (Naandwichs)
   ].filter((item): item is NonNullable<typeof item> => item !== null);
 
-  const categoryImages: Record<string, string> = {
-    "naan-burgers": "/images/big_square.webp",
-    "naandwichs": "/images/super_trio.webp",
-    "burgers": "/images/double_cheese.webp",
-    "smash-burgers": "/images/times_square.webp",
-    "tinger": "/images/tinger.webp"
-  };
+  // Regroupement par onglets principaux pour la grille d'accueil
+  const tabCards = [
+    { 
+      id: "naan-burger", 
+      title: "Naan Burgers", 
+      image: "/images/big_square.webp", 
+      href: "/menu#naan-burgers", 
+      count: `${menuData.find(c => c.id === "naan-burgers")?.items.length || 6} Produits` 
+    },
+    { 
+      id: "naandwich", 
+      title: "Naandwichs", 
+      image: "/images/super_trio.webp", 
+      href: "/menu#naandwichs", 
+      count: `${menuData.find(c => c.id === "naandwichs")?.items.length || 10} Produits` 
+    },
+    { 
+      id: "burger", 
+      title: "Burgers", 
+      image: "/images/double_cheese.webp", 
+      href: "/menu#burgers", 
+      count: "66 Produits" // Regroupe Burgers, Smash, Tingers, Plaisirs, Spéciaux, Kids
+    },
+    { 
+      id: "side", 
+      title: "Accompagnements", 
+      image: "https://www.restaurant-times-square.com/wp-content/uploads/2025/06/X4-MOZZA-STICK-300x300.png", 
+      href: "/menu#sides", 
+      count: "23 Produits" // Regroupe Salades, Sides, Fried chicken
+    },
+    { 
+      id: "dessert", 
+      title: "Desserts", 
+      image: "https://www.restaurant-times-square.com/wp-content/uploads/2026/04/pistachiocroffle-300x300.png", 
+      href: "/menu#desserts", 
+      count: `${menuData.find(c => c.id === "desserts")?.items.length || 14} Produits` 
+    },
+    { 
+      id: "boisson", 
+      title: "Boissons", 
+      image: "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/coca-cola-verre-2-300x300.png", 
+      href: "/menu#boissons", 
+      count: `${menuData.find(c => c.id === "boissons")?.items.length || 20} Produits` 
+    }
+  ];
 
   return (
     <>
@@ -65,18 +103,18 @@ export default function Home() {
           <h2 className="text-xs font-black text-ts-red tracking-[0.4em] uppercase mb-4">La Carte</h2>
           <p className="text-4xl md:text-5xl font-black text-ts-white tracking-tight uppercase mb-20">Que voulez-vous déguster ?</p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {menuData.map((cat) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tabCards.map((card) => (
               <Link 
-                key={cat.id} 
-                href={`/menu#${cat.id}`} 
+                key={card.id} 
+                href={card.href} 
                 className="relative h-72 rounded-3xl overflow-hidden border border-white/5 shadow-2xl hover:border-ts-red/40 hover:shadow-[0_15px_35px_rgba(229,9,20,0.25)] transition-all duration-500 hover:-translate-y-2 group"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 z-0">
                   <img 
-                    src={categoryImages[cat.id] || "/images/big_square.webp"} 
-                    alt={cat.title} 
+                    src={card.image} 
+                    alt={card.title} 
                     className="w-full h-full object-cover opacity-35 group-hover:scale-110 group-hover:opacity-50 transition-all duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ts-bg via-ts-bg/85 to-transparent" />
@@ -85,10 +123,10 @@ export default function Home() {
                 {/* Content */}
                 <div className="absolute inset-0 p-6 flex flex-col justify-end items-start z-10 text-left">
                   <span className="text-[10px] font-black text-ts-red uppercase tracking-widest bg-ts-red/15 border border-ts-red/20 px-2.5 py-1 rounded-full mb-3">
-                    {cat.items.length} Produits
+                    {card.count}
                   </span>
                   <h3 className="text-lg md:text-xl font-black text-ts-white uppercase tracking-tight leading-tight group-hover:text-ts-red transition-colors duration-300">
-                    {cat.title}
+                    {card.title}
                   </h3>
                   <span className="text-[10px] text-ts-gray/50 font-bold uppercase tracking-widest mt-2 flex items-center gap-1 group-hover:text-ts-white transition-colors duration-300">
                     Découvrir <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
