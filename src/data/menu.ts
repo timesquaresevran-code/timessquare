@@ -29,7 +29,7 @@ export const menuData: Category[] = [
         "category": "Naan Burgers",
         "description": "Pain naan, 2 steaks, cheddar, salade, oignons, sauce Giant.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/BIG-MAX-300x300.png"
+        "image": "/images/GEANT-768x768.webp"
       },
       {
         "id": "nb-big-pepper",
@@ -37,7 +37,7 @@ export const menuData: Category[] = [
         "category": "Naan Burgers",
         "description": "Pain naan, 2 steaks, cheddar, bacon fumé de bœuf, œuf, sauce pepper.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/BIG-PEPPER-300x300.png",
+        "image": "/images/BIG-PEPPER-768x768.webp",
         "badge": "Populaire"
       },
       {
@@ -46,7 +46,7 @@ export const menuData: Category[] = [
         "category": "Naan Burgers",
         "description": "Pain naan, 2 steaks, cheddar, oignons, salade, cornichons, sauce Big Max.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/BIG-MAX-300x300.png"
+        "image": "/images/BIG-MAX-768x768.webp"
       },
       {
         "id": "nb-tower",
@@ -54,7 +54,7 @@ export const menuData: Category[] = [
         "category": "Naan Burgers",
         "description": "Pain naan, fried chicken, cheddar, galette de pomme de terre, salade, sauce Chicken Max, sauce Tinger.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/TOWER-300x300.png"
+        "image": "/images/TOWER-768x768.webp"
       },
       {
         "id": "nb-master-naan",
@@ -62,7 +62,7 @@ export const menuData: Category[] = [
         "category": "Naan Burgers",
         "description": "Pain naan, steak, fried chicken, cheddar, œuf, tranche de poulet fumé, sauce barbecue, sauce pepper.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/MASTER-NAAN-300x300.png",
+        "image": "/images/MASTER-NAAN-768x768.webp",
         "badge": "Signature"
       },
       {
@@ -71,7 +71,7 @@ export const menuData: Category[] = [
         "category": "Naan Burgers",
         "description": "Pain naan, 2 steaks, cheddar, emmental, tomates, oignons, sauce ketchup, sauce Chicken Max.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/NAAN-180-300x300.png"
+        "image": "/images/NAAN-180-768x768.webp"
       }
     ]
   },
@@ -87,7 +87,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "Poulet mariné au tandoori, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/CHICKEN-DU-CHEF--300x233.png"
+        "image": "/images/TANDOORI-copie-768x598.webp"
       },
       {
         "id": "nd-chicken-du-chef",
@@ -95,7 +95,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "Poulet mariné au curry, crème fraîche, champignons, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/CHICKEN-MIXTE-copie-300x233.png",
+        "image": "/images/CHICKEN-DU-CHEF--768x598.webp",
         "badge": "Signature"
       },
       {
@@ -104,7 +104,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "Poulet mariné au tandoori, poulet mariné au curry, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/CHICKEN-THAI-copie-300x233.png"
+        "image": "/images/CHICKEN-MIXTE-copie-768x598.webp"
       },
       {
         "id": "nd-chicken-tha-",
@@ -112,7 +112,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "Poulet mariné, sauce thaï, poivrons, oignons, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/FARMER-copie-300x233.png"
+        "image": "/images/CHICKEN-THAI-copie-768x598.webp"
       },
       {
         "id": "nd-farmer",
@@ -120,7 +120,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "Escalope de poulet, tranche de poulet fumé, champignons, sauce gruyère, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/RADICAL-copie-300x233.png"
+        "image": "/images/FARMER-copie-768x598.webp"
       },
       {
         "id": "nd-radical",
@@ -128,7 +128,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "2 steaks, cordon bleu, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/TORNADO-copie-300x233.png"
+        "image": "/images/RADICAL-copie-768x598.webp"
       },
       {
         "id": "nd-tornado",
@@ -136,7 +136,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "2 steaks, fried chicken, œuf, tranche de poulet fumé, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/CROUSTY-copie-300x233.png"
+        "image": "/images/TORNADO-copie-768x598.webp"
       },
       {
         "id": "nd-crousty",
@@ -144,7 +144,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "Fried chicken, galette de pomme de terre, cheddar, crudités et sauce au choix.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/TEXAS-copie-300x233.png"
+        "image": "/images/CROUSTY-copie-768x598.webp"
       },
       {
         "id": "nd-texas",
@@ -152,7 +152,7 @@ export const menuData: Category[] = [
         "category": "Naandwichs",
         "description": "3 steaks, tranche de poulet fumé, œuf, boursin, crudités et sauce au choix.",
         "price": null,
-        "image": "/images/texas.webp"
+        "image": "/images/TEXAS-copie-768x598.webp"
       }
     ]
   },
@@ -168,7 +168,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Escalope de poulet, tranche de poulet fumé, cheddar, Boursin, crudités et sauce au choix.",
         "price": null,
-        "image": "/images/super_trio.webp"
+        "image": "/images/SUPER-TRIO-copie-768x598.webp"
       },
       {
         "id": "bg-big-square",
@@ -176,7 +176,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Pain sésame, 2 steaks, cheddar, salade, oignons, cornichons, sauce Big Max.",
         "price": null,
-        "image": "/images/big_square.webp",
+        "image": "/images/BIG-SQUARE-copie-768x768.webp",
         "badge": "Signature"
       },
       {
@@ -185,7 +185,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Pain simple, 2 steaks, cheddar, oignons, cornichons, ketchup, moutarde.",
         "price": null,
-        "image": "/images/double_cheese.webp",
+        "image": "/images/DOUBLE-CHEESE-copie-768x768.webp",
         "badge": "Populaire"
       },
       {
@@ -194,7 +194,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Pain sésame, 2 fried chickens, tranche de cheddar, salade, oignons, cornichons, sauce Big Square",
         "price": null,
-        "image": "/images/big_chick.webp"
+        "image": "/images/BIGCHICK_1.webp"
       },
       {
         "id": "bg-max-chicken",
@@ -202,7 +202,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Pain sésame, steak de poulet pané, cheddar, salade, sauce Max Chicken.",
         "price": null,
-        "image": "/images/max_chicken.webp"
+        "image": "/images/MAXCHICKEN_6.webp"
       },
       {
         "id": "bg-g-square",
@@ -210,7 +210,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Pain simple, 2 steaks, cheddar, salade, oignons, sauce G-Square.",
         "price": null,
-        "image": "/images/g_square.webp"
+        "image": "/images/G-SQUARE-copie-768x768.webp"
       },
       {
         "id": "bg-fish",
@@ -218,7 +218,7 @@ export const menuData: Category[] = [
         "category": "Nos Burgers",
         "description": "Pain simple, poisson pané, cheddar, sauce Fish.",
         "price": null,
-        "image": "/images/fish.webp"
+        "image": "/images/FISH-copie-768x768.webp"
       }
     ]
   },
@@ -234,7 +234,7 @@ export const menuData: Category[] = [
         "category": "Smash Burgers",
         "description": "Potato buns, 2 steaks smashés, cheddar, tomates, salade, sauce Smash.",
         "price": null,
-        "image": "/images/classique.webp",
+        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/Classique-copie-1-300x200.png",
         "badge": "Populaire"
       },
       {
@@ -243,7 +243,7 @@ export const menuData: Category[] = [
         "category": "Smash Burgers",
         "description": "Potato buns, fried chicken, cheddar, salade, sauce Times Square.",
         "price": null,
-        "image": "/images/chicken_square.webp"
+        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/Chicken-Square-copie-1-300x200.png"
       },
       {
         "id": "sb-times-square",
@@ -251,7 +251,7 @@ export const menuData: Category[] = [
         "category": "Smash Burgers",
         "description": "Potato buns, 2 steaks smashés, bacon fumé de bœuf, cheddar, oignons, cornichons, moutarde américaine, ketchup.",
         "price": null,
-        "image": "/images/times_square.webp",
+        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/Time-Square-copie-1-300x200.png",
         "badge": "Signature"
       },
       {
@@ -260,7 +260,7 @@ export const menuData: Category[] = [
         "category": "Smash Burgers",
         "description": "Potato buns, 2 steaks smashés, cheddar, salade iceberg, sauce Manhattan.",
         "price": null,
-        "image": "/images/manhattan.webp"
+        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2024/08/Manhattan-copie-300x200.png"
       }
     ]
   },
@@ -276,7 +276,7 @@ export const menuData: Category[] = [
         "category": "Tingers",
         "description": "Fried chicken, cheddar, salade, sauce Tinger, mayonnaise.",
         "price": null,
-        "image": "/images/tinger.webp"
+        "image": "/images/Tinger-copie-1-768x512.webp"
       },
       {
         "id": "tg-tinger-tower",
@@ -284,7 +284,7 @@ export const menuData: Category[] = [
         "category": "Tingers",
         "description": "Fried chicken, galette de pomme de terre, cheddar, salade, sauce Tinger, mayonnaise.",
         "price": null,
-        "image": "/images/tinger_tower.webp"
+        "image": "/images/Tinger-Tower-copie-1-768x512.webp"
       }
     ]
   },
@@ -300,7 +300,7 @@ export const menuData: Category[] = [
         "category": "P'tits Plaisirs",
         "description": "Pain simple, steak, cheddar, ketchup, moutarde, oignon, cornichon",
         "price": null,
-        "image": "/images/cheese_burger.webp"
+        "image": "/images/CHEESE-BURGER-CHEDDAR-SEUL-768x768.webp"
       },
       {
         "id": "pp-little-g-square",
@@ -308,7 +308,7 @@ export const menuData: Category[] = [
         "category": "P'tits Plaisirs",
         "description": "Pain simple, steak, cheddar, sauce Géant, salade, oignon",
         "price": null,
-        "image": "/images/little_g_square.webp"
+        "image": "/images/LITTLE-G-SQUARE-CHEDDAR-SEUL-768x768.webp"
       },
       {
         "id": "pp-hamburger",
@@ -316,7 +316,7 @@ export const menuData: Category[] = [
         "category": "P'tits Plaisirs",
         "description": "Pain simple, steak, ketchup, moutarde, oignon, cornichon",
         "price": null,
-        "image": "/images/hamburger.webp"
+        "image": "/images/Hamburger-seul-768x768.webp"
       },
       {
         "id": "pp-crispy-chicken",
@@ -324,7 +324,7 @@ export const menuData: Category[] = [
         "category": "P'tits Plaisirs",
         "description": "Pain simple, steak, emmental, salade, oignons frits et sauce Salt n&#8217; Pepper",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2026/03/CRISPYBEEF-300x300.png"
+        "image": "/images/CRISPYCHICKEN_2.webp"
       },
       {
         "id": "pp-crispy-beef",
@@ -332,7 +332,7 @@ export const menuData: Category[] = [
         "category": "P'tits Plaisirs",
         "description": "Pain simple, steak, emmental, salade, oignons frits et sauce Salt n&#8217; Pepper.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2026/03/GOLDCHICKEN-300x300.png"
+        "image": "/images/CRISPYBEEF.webp"
       },
       {
         "id": "pp-golden-chick",
@@ -340,7 +340,7 @@ export const menuData: Category[] = [
         "category": "P'tits Plaisirs",
         "description": "Pain simple, 2 fried chickens, cheddar, salade, oignons, cornichons, sauce Big Square.",
         "price": null,
-        "image": "https://www.restaurant-times-square.com/wp-content/uploads/2025/06/PETITE-FRITE-300x300.png"
+        "image": "/images/GOLDCHICKEN.webp"
       }
     ]
   },
