@@ -10,11 +10,11 @@ export default function MenuCard({ product }: { product: Product }) {
       )}
       
       {product.image ? (
-        <div className="relative h-60 overflow-hidden bg-ts-bg flex items-center justify-center p-6">
+        <div className="relative h-64 overflow-hidden bg-ts-bg flex items-center justify-center p-4">
           <img 
             src={product.image} 
             alt={product.name} 
-            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-out"
+            className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.25] transition-transform duration-500 ease-out"
           />
           {/* Vignette effect */}
           <div className="absolute inset-0 bg-gradient-to-t from-ts-card via-ts-card/10 to-transparent pointer-events-none" />
