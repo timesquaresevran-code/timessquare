@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -7,8 +8,18 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl md:text-2xl font-black tracking-tighter text-ts-white uppercase group">
-              TIMES SQUARE <span className="text-ts-red group-hover:text-ts-white transition-colors duration-300">SEVRAN</span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <Image 
+                src="/logo.webp" 
+                alt="Times Square Sevran Logo" 
+                width={48} 
+                height={48} 
+                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
+              <span className="text-xl md:text-2xl font-black tracking-tighter text-ts-white uppercase">
+                <span className="text-ts-red group-hover:text-ts-white transition-colors duration-300">SEVRAN</span>
+              </span>
             </Link>
           </div>
           

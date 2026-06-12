@@ -9,9 +9,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-black tracking-tighter text-ts-white mb-4 uppercase">
-              TIMES SQUARE <span className="text-ts-red">SEVRAN</span>
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/logo.webp" 
+                alt="Times Square Logo" 
+                className="h-12 w-auto object-contain"
+              />
+              <h3 className="text-2xl font-black tracking-tighter text-ts-white uppercase">
+                <span className="text-ts-red">SEVRAN</span>
+              </h3>
+            </div>
             <p className="text-ts-gray text-sm font-medium">
               L'excellence du fast-food. Des ingrédients de qualité pour une expérience inoubliable.
             </p>
