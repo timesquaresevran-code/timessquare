@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen bg-ts-bg flex flex-col justify-center overflow-hidden border-b border-ts-red/10 pt-20">
+    <div className="relative min-h-screen bg-ts-bg flex flex-col justify-center overflow-hidden border-b border-ts-red/10 pt-28">
       {/* Background with Grid & Image Overlays */}
       <div className="absolute inset-0 z-0">
         <img

@@ -5,16 +5,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 w-full bg-ts-bg/70 backdrop-blur-lg z-50 border-b border-ts-red/10 shadow-[0_4px_30px_rgba(0,0,0,0.5),0_1px_5px_rgba(229,9,20,0.05)] transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-3 group">
               <Image 
                 src="/logo.webp" 
                 alt="Times Square Sevran Logo" 
-                width={64} 
-                height={64} 
-                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                width={96} 
+                height={96} 
+                className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 priority
               />
               <span className="text-xl md:text-2xl font-black tracking-tighter text-ts-white uppercase">

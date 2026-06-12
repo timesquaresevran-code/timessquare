@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${inter.className} bg-ts-bg text-ts-white antialiased min-h-screen flex flex-col pt-20`}>
+      <body className={`${inter.className} bg-ts-bg text-ts-white antialiased min-h-screen flex flex-col pt-28`}>
         <Header />
         <PopupOuverture />
         <main className="flex-grow">

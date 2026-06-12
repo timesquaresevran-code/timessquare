@@ -13,7 +13,7 @@ export default function Footer() {
               <img 
                 src="/logo.webp" 
                 alt="Times Square Logo" 
-                className="h-16 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
               <h3 className="text-2xl font-black tracking-tighter text-ts-white uppercase">
                 <span className="text-ts-red">SEVRAN</span>

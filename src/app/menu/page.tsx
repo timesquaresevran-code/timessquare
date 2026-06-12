@@ -66,7 +66,7 @@ export default function MenuPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Filtres par Onglets (Tabs) */}
-        <div className="sticky top-20 z-40 bg-ts-bg/75 backdrop-blur-lg py-5 mb-16 border-b border-white/5 -mx-4 px-4 sm:mx-0 sm:px-0">
+        <div className="sticky top-28 z-40 bg-ts-bg/75 backdrop-blur-lg py-5 mb-16 border-b border-white/5 -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="flex overflow-x-auto gap-3 pb-3 scrollbar-hide items-center justify-start md:justify-center">
             {TABS.map((tab) => (
               <button 
