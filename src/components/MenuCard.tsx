@@ -2,26 +2,29 @@ import { Product } from "@/data/menu";
 
 export default function MenuCard({ product }: { product: Product }) {
   return (
-    <div className="bg-ts-card rounded-2xl overflow-hidden border border-white/5 hover:border-ts-red/40 transition-all duration-500 group hover:-translate-y-2 shadow-2xl hover:shadow-[0_15px_35px_rgba(229,9,20,0.2)] flex flex-col h-full relative">
+    <div className="bg-[#121214] rounded-2xl overflow-hidden border border-white/5 hover:border-ts-red/20 transition-all duration-500 group hover:-translate-y-1.5 shadow-2xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.6),0_4px_20px_rgba(229,9,20,0.1)] flex flex-col h-full relative">
       {product.badge && (
-        <div className="absolute top-4 right-4 z-10 bg-ts-red/90 backdrop-blur-md text-ts-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg border border-white/10">
+        <div className="absolute top-4 right-4 z-10 bg-ts-red text-ts-white text-[9px] font-black uppercase tracking-widest px-2.5 py-1 rounded-md shadow-[0_0_15px_rgba(229,9,20,0.6)] border border-white/10">
           {product.badge}
         </div>
       )}
       
       {product.image ? (
-        <div className="relative h-64 overflow-hidden bg-ts-bg flex items-center justify-center p-4">
+        <div className="relative h-64 overflow-hidden bg-[#0a0a0b] flex items-center justify-center p-4">
+          {/* Immersive radial ambient glow behind the food image */}
+          <div className="absolute w-28 h-28 rounded-full bg-ts-red/10 blur-[40px] group-hover:w-40 group-hover:h-40 group-hover:bg-ts-red/20 transition-all duration-700 ease-out pointer-events-none" />
+          
           <img 
             src={product.image} 
             alt={product.name} 
-            className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.25] transition-transform duration-500 ease-out"
+            className="w-full h-full object-contain scale-[1.15] group-hover:scale-[1.22] transition-transform duration-500 ease-out relative z-10"
           />
-          {/* Vignette effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-ts-card via-ts-card/10 to-transparent pointer-events-none" />
+          {/* Vignette effect fading to card background */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#121214] via-[#121214]/15 to-transparent pointer-events-none z-20" />
         </div>
       ) : (
         /* Premium minimalistic placeholder for items without images */
-        <div className="relative h-44 bg-[#0e0e0e] flex items-center justify-center overflow-hidden border-b border-white/5">
+        <div className="relative h-44 bg-[#0a0a0b] flex items-center justify-center overflow-hidden border-b border-white/5">
           <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]"></div>
           <div className="w-16 h-16 rounded-full bg-ts-red/5 flex items-center justify-center border border-ts-red/10 group-hover:scale-110 transition-transform duration-500">
             <span className="text-3xl filter grayscale opacity-45 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">🍔</span>
@@ -30,9 +33,9 @@ export default function MenuCard({ product }: { product: Product }) {
         </div>
       )}
 
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-6 flex flex-col flex-grow relative z-30">
         <div className="flex justify-between items-start mb-4 gap-4">
-          <h3 className="text-lg font-black text-ts-white uppercase tracking-tight group-hover:text-ts-red transition-colors duration-300 leading-tight">
+          <h3 className="text-base md:text-lg font-black text-ts-white uppercase tracking-tight group-hover:text-ts-red transition-colors duration-300 leading-tight">
             {product.name}
           </h3>
           {product.price !== null && (
@@ -41,7 +44,7 @@ export default function MenuCard({ product }: { product: Product }) {
             </span>
           )}
         </div>
-        <p className="text-ts-gray/80 text-sm font-medium leading-relaxed flex-grow">
+        <p className="text-ts-gray/60 text-sm font-medium leading-relaxed flex-grow">
           {product.description}
         </p>
       </div>
