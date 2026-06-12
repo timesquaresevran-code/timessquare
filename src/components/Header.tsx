@@ -12,9 +12,9 @@ export default function Header() {
               <Image 
                 src="/logo.webp" 
                 alt="Times Square Sevran Logo" 
-                width={48} 
-                height={48} 
-                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                width={64} 
+                height={64} 
+                className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 priority
               />
               <span className="text-xl md:text-2xl font-black tracking-tighter text-ts-white uppercase">
