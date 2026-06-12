@@ -153,6 +153,14 @@ export const menuData: Category[] = [
         "description": "3 steaks, tranche de poulet fumé, œuf, boursin, crudités et sauce au choix.",
         "price": null,
         "image": "/images/TEXAS-copie-768x598.webp"
+      },
+      {
+        "id": "nd-super-trio",
+        "name": "super trio",
+        "category": "Naandwichs",
+        "description": "Escalope de poulet, tranche de poulet fumé, cheddar, Boursin, crudités et sauce au choix.",
+        "price": null,
+        "image": "/images/SUPER-TRIO-copie-768x598.webp"
       }
     ]
   },
@@ -162,14 +170,6 @@ export const menuData: Category[] = [
     "subtitle": "Servis avec frites ou potatoes + boisson 33cl",
     "tab": "burger",
     "items": [
-      {
-        "id": "bg-super-trio",
-        "name": "super trio",
-        "category": "Nos Burgers",
-        "description": "Escalope de poulet, tranche de poulet fumé, cheddar, Boursin, crudités et sauce au choix.",
-        "price": null,
-        "image": "/images/SUPER-TRIO-copie-768x598.webp"
-      },
       {
         "id": "bg-big-square",
         "name": "BIG SQUARE",
