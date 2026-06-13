@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bungee } from "next/font/google";
+import { Inter, Great_Vibes } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -7,10 +7,10 @@ import PopupOuverture from "@/components/PopupOuverture";
 import CookieBanner from "@/components/CookieBanner";
 
 const inter = Inter({ subsets: ["latin"] });
-const bungee = Bungee({
+const greatVibes = Great_Vibes({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-bungee",
+  variable: "--font-signature",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${inter.className} ${bungee.variable} bg-ts-bg text-ts-white antialiased min-h-screen flex flex-col pt-28`}>
+      <body className={`${inter.className} ${greatVibes.variable} bg-ts-bg text-ts-white antialiased min-h-screen flex flex-col pt-28`}>
         <Header />
         <PopupOuverture />
         <main className="flex-grow">
