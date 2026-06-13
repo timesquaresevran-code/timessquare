@@ -234,100 +234,124 @@ export default function Home() {
 
       {/* Ouverture & Accès */}
       <div className="bg-[#08080a] py-32 relative overflow-hidden border-t border-white/5">
-        {/* Ambient background glows */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-ts-red/10 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-ts-darkred/15 rounded-full blur-[120px] pointer-events-none" />
-        
+        {/* Ambient glows */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-ts-red/8 rounded-full blur-[130px] pointer-events-none" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-ts-darkred/10 rounded-full blur-[150px] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            {/* Section Ouverture */}
-            <div className="bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-xl p-10 md:p-12 rounded-[2.5rem] border border-white/[0.06] shadow-2xl relative group hover:border-ts-red/30 hover:shadow-[0_20px_45px_rgba(229,9,20,0.15)] transition-all duration-500 hover:-translate-y-1.5">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-ts-red/5 rounded-bl-full pointer-events-none -z-0 blur-xl group-hover:bg-ts-red/10 transition-colors duration-500"></div>
-              
-              <h3 className="text-2xl font-black text-ts-white uppercase tracking-tight mb-10 relative z-10 flex items-center gap-4">
-                <span className="flex items-center justify-center w-12 h-12 rounded-2xl bg-ts-red/10 border border-ts-red/20 shadow-[0_0_15px_rgba(229,9,20,0.1)] group-hover:scale-110 group-hover:bg-ts-red/20 transition-all duration-500">
-                  <svg className="w-6 h-6 text-ts-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </span>
-                Nos Horaires
-              </h3>
-              
-              <ul className="space-y-4 text-base font-semibold text-ts-gray relative z-10">
-                <li className="flex justify-between items-center py-3.5 border-b border-white/[0.04] last:border-0 hover:bg-white/[0.01] px-2 rounded-lg transition-colors duration-300">
-                  <span className="text-ts-gray/80 text-sm font-bold uppercase tracking-wider">Lundi - Jeudi</span>
-                  <span className="text-white font-black bg-white/[0.03] border border-white/[0.08] px-4 py-2 rounded-xl text-xs md:text-sm shadow-sm group-hover:border-ts-red/20 transition-colors duration-500">
-                    11h30 - 14h30 • 18h30 - 23h00
-                  </span>
-                </li>
-                <li className="flex justify-between items-center py-3.5 border-b border-white/[0.04] last:border-0 hover:bg-white/[0.01] px-2 rounded-lg transition-colors duration-300">
-                  <span className="text-ts-gray/80 text-sm font-bold uppercase tracking-wider">Vendredi</span>
-                  <span className="text-white font-black bg-white/[0.03] border border-white/[0.08] px-4 py-2 rounded-xl text-xs md:text-sm shadow-sm group-hover:border-ts-red/20 transition-colors duration-500">
-                    18h30 - 00h00
-                  </span>
-                </li>
-                <li className="flex justify-between items-center py-3.5 border-b border-white/[0.04] last:border-0 hover:bg-white/[0.01] px-2 rounded-lg transition-colors duration-300">
-                  <span className="text-ts-gray/80 text-sm font-bold uppercase tracking-wider">Samedi</span>
-                  <span className="text-white font-black bg-white/[0.03] border border-white/[0.08] px-4 py-2 rounded-xl text-xs md:text-sm shadow-sm group-hover:border-ts-red/20 transition-colors duration-500">
-                    11h30 - 15h00 • 18h30 - 00h00
-                  </span>
-                </li>
-                <li className="flex justify-between items-center py-3.5 border-b border-white/[0.04] last:border-0 hover:bg-white/[0.01] px-2 rounded-lg transition-colors duration-300">
-                  <span className="text-ts-gray/80 text-sm font-bold uppercase tracking-wider">Dimanche</span>
-                  <span className="text-white font-black bg-white/[0.03] border border-white/[0.08] px-4 py-2 rounded-xl text-xs md:text-sm shadow-sm group-hover:border-ts-red/20 transition-colors duration-500">
-                    18h30 - 23h00
-                  </span>
-                </li>
-              </ul>
+
+          {/* Section header */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 mb-5 bg-ts-red/10 border border-ts-red/20 px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(229,9,20,0.1)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-ts-red animate-pulse" />
+              <span className="text-[10px] font-black text-ts-red tracking-[0.5em] uppercase">Infos pratiques</span>
             </div>
- 
-            {/* Section Adresse */}
-            <div className="bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-xl p-10 md:p-12 rounded-[2.5rem] border border-white/[0.06] shadow-2xl relative group hover:border-ts-red/30 hover:shadow-[0_20px_45px_rgba(229,9,20,0.15)] transition-all duration-500 hover:-translate-y-1.5">
-              <div className="absolute bottom-0 right-0 w-48 h-48 bg-ts-darkred/5 rounded-tl-full pointer-events-none -z-0 blur-xl group-hover:bg-ts-darkred/10 transition-colors duration-500"></div>
-              
-              <h3 className="text-2xl font-black text-ts-white uppercase tracking-tight mb-10 relative z-10 flex items-center gap-4">
-                <span className="flex items-center justify-center w-12 h-12 rounded-2xl bg-ts-red/10 border border-ts-red/20 shadow-[0_0_15px_rgba(229,9,20,0.1)] group-hover:scale-110 group-hover:bg-ts-red/20 transition-all duration-500">
-                  <svg className="w-6 h-6 text-ts-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <h2 className="text-4xl md:text-5xl font-black text-ts-white tracking-tight uppercase leading-tight">
+              Venez nous <span className="bg-gradient-to-r from-ts-red via-[#ff3b47] to-[#ff7b00] bg-clip-text text-transparent">rendre visite</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+
+            {/* ── Horaires ── (3/5) */}
+            <div className="lg:col-span-3 bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-xl rounded-[2.5rem] border border-white/[0.06] shadow-2xl overflow-hidden group hover:border-ts-red/25 hover:shadow-[0_25px_60px_rgba(229,9,20,0.12)] transition-all duration-500 hover:-translate-y-1">
+
+              {/* Card header */}
+              <div className="px-8 pt-8 pb-6 border-b border-white/[0.05] flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-ts-red/10 border border-ts-red/20 group-hover:bg-ts-red/20 group-hover:scale-110 transition-all duration-500">
+                    <svg className="w-5 h-5 text-ts-red" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                  <h3 className="text-lg font-black text-ts-white uppercase tracking-tight">Nos Horaires</h3>
+                </div>
+                {/* Ouvert / Fermé badge */}
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-black uppercase tracking-widest text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-3 py-1.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Ouvert
+                </span>
+              </div>
+
+              {/* Rows */}
+              <ul className="divide-y divide-white/[0.04]">
+                {[
+                  { day: "Lundi – Jeudi", slots: ["11h30 – 14h30", "18h30 – 23h00"] },
+                  { day: "Vendredi",      slots: ["18h30 – 00h00"] },
+                  { day: "Samedi",        slots: ["11h30 – 15h00", "18h30 – 00h00"] },
+                  { day: "Dimanche",      slots: ["18h30 – 23h00"] },
+                ].map(({ day, slots }) => (
+                  <li key={day} className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-8 py-5 hover:bg-white/[0.015] transition-colors duration-200 group/row">
+                    <span className="text-ts-gray/70 text-sm font-bold uppercase tracking-widest shrink-0">{day}</span>
+                    <div className="flex flex-wrap gap-2 sm:justify-end">
+                      {slots.map((slot) => (
+                        <span key={slot} className="inline-flex items-center gap-1.5 bg-white/[0.03] border border-white/[0.07] group-hover/row:border-ts-red/20 px-4 py-2 rounded-xl text-xs font-black text-white tracking-wider transition-colors duration-300">
+                          <span className="w-1 h-1 rounded-full bg-ts-red/60" />
+                          {slot}
+                        </span>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Footer note */}
+              <div className="px-8 py-5 border-t border-white/[0.04] flex items-center gap-2">
+                <svg className="w-4 h-4 text-ts-red/50 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p className="text-[11px] text-ts-gray/35 font-semibold">Horaires susceptibles de varier les jours fériés.</p>
+              </div>
+            </div>
+
+            {/* ── Contact & Adresse ── (2/5) */}
+            <div className="lg:col-span-2 flex flex-col gap-6">
+
+              {/* Adresse card */}
+              <div className="bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-xl rounded-[2rem] border border-white/[0.06] p-7 shadow-xl group hover:border-ts-red/25 hover:shadow-[0_20px_45px_rgba(229,9,20,0.12)] transition-all duration-500 hover:-translate-y-1">
+                <p className="text-[10px] font-black text-ts-red uppercase tracking-[0.3em] mb-4 flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                </span>
-                Accès & Contact
-              </h3>
-              
-              <div className="space-y-8 relative z-10">
-                <div>
-                  <p className="text-ts-red uppercase tracking-[0.2em] text-[10px] font-black mb-2 flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-ts-red" /> Adresse
-                  </p>
-                  <p className="text-2xl font-black text-ts-white leading-tight">2e Bd Westinghouse</p>
-                  <p className="text-sm text-ts-gray/60 font-semibold mt-1">93270 Sevran</p>
-                </div>
-                <div>
-                  <p className="text-ts-red uppercase tracking-[0.2em] text-[10px] font-black mb-2 flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-ts-red" /> Contact
-                  </p>
-                  <p className="text-3xl font-black text-ts-white tracking-tight hover:text-ts-red transition-colors duration-300 select-all">
-                    01 86 04 79 46
-                  </p>
-                </div>
-                <div className="pt-4">
-                  <a 
-                    href="https://www.google.com/maps/dir/?api=1&destination=2e+Bd+Westinghouse,+93270+Sevran" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-ts-red to-ts-darkred hover:from-[#ff1e2b] hover:to-ts-red text-xs font-black rounded-full text-ts-white hover:shadow-[0_10px_30px_rgba(229,9,20,0.35)] border border-white/10 transition-all duration-300 uppercase tracking-[0.15em] w-full group"
-                  >
-                    Lancer l'itinéraire
-                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                    </svg>
-                  </a>
-                </div>
+                  Adresse
+                </p>
+                <p className="text-xl font-black text-ts-white leading-snug">2e Bd Westinghouse</p>
+                <p className="text-sm text-ts-gray/50 font-semibold mt-1">93270 Sevran</p>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=2e+Bd+Westinghouse,+93270+Sevran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 bg-gradient-to-r from-ts-red to-ts-darkred hover:from-[#ff1e2b] hover:to-ts-red text-[11px] font-black rounded-xl text-white uppercase tracking-[0.15em] shadow-[0_8px_25px_rgba(229,9,20,0.25)] hover:shadow-[0_12px_30px_rgba(229,9,20,0.4)] transition-all duration-300 group/btn"
+                >
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                  </svg>
+                  Lancer l'itinéraire
+                  <svg className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
-             </div>
- 
+
+              {/* Téléphone card */}
+              <div className="bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-xl rounded-[2rem] border border-white/[0.06] p-7 shadow-xl group hover:border-ts-red/25 hover:shadow-[0_20px_45px_rgba(229,9,20,0.12)] transition-all duration-500 hover:-translate-y-1">
+                <p className="text-[10px] font-black text-ts-red uppercase tracking-[0.3em] mb-4 flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Téléphone
+                </p>
+                <a
+                  href="tel:+33186047946"
+                  className="block text-3xl font-black text-ts-white tracking-tight hover:text-ts-red transition-colors duration-300 select-all"
+                >
+                  01 86 04 79 46
+                </a>
+                <p className="text-[11px] text-ts-gray/35 font-semibold mt-3">Disponible pendant les heures d'ouverture</p>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
