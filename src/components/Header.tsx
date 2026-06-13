@@ -44,9 +44,14 @@ export default function Header() {
                   className="h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                   priority
                 />
-                <span className="text-xl md:text-2xl font-black tracking-tighter text-ts-white uppercase">
-                  <span className="text-ts-red group-hover:text-ts-white transition-colors duration-300">SEVRAN</span>
+                <span
+                className="text-2xl md:text-3xl tracking-[0.08em] uppercase leading-none"
+                style={{ fontFamily: "var(--font-bungee)" }}
+              >
+                <span className="bg-gradient-to-br from-ts-red via-[#ff3b47] to-[#c0001a] bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(229,9,20,0.5)] group-hover:drop-shadow-[0_0_20px_rgba(229,9,20,0.8)] transition-all duration-300">
+                  SEVRAN
                 </span>
+              </span>
               </Link>
             </div>
 
